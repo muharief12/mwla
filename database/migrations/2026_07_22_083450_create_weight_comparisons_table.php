@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('dimension_choosen', ['MD', 'PD', 'TD', 'OP', 'EF', 'FR']);
             $table->timestamps();
 
-            $table->unique('assessment_id', 'pair_number');
+            $table->unique(['assessment_id', 'pair_number']);
         });
     }
 

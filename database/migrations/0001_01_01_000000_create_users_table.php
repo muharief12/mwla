@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['dosen', 'mahasiswa']);
-            $table->integer('no_wa');
-            $table->enum('gender', ['pria', 'perempuan']);
+            $table->enum('role', ['dosen', 'mahasiswa'])->default('dosen');
+            $table->string('no_wa')->nullable();
+            $table->enum('gender', ['pria', 'perempuan'])->default('pria');
             $table->rememberToken();
             $table->timestamps();
         });

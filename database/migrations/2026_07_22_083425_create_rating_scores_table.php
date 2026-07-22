@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('raw_score');
             $table->timestamps();
 
-            $table->unique('assessment_id', 'dimension');
+            $table->unique(['assessment_id', 'dimension']);
         });
     }
 
